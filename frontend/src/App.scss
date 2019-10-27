@@ -1,22 +1,9 @@
-.App {
-  text-align: center;
-}
+@import "index.scss";
 
-.App-logo {
-  height: 40vmin;
-}
+$minHeight: $layoutContentHeight;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #09d3ac;
+#Content {
+  min-height: $minHeight;
+  background: url("https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.CDr_SlBrNymTKfbleckFYwHaE7%26pid%3DApi&f=1");
+  background-size: cover;
 }

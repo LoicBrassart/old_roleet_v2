@@ -1,17 +1,17 @@
 @import "../../index.scss";
 
-$footerHeight: 30vh;
-$footerMargin: 30px;
+$height: $layoutFooterHeight;
+$margin: 30px;
 
 #Footer {
-  min-height: $footerHeight;
+  height: $height;
 
   background-color: $layoutBgColor;
   color: $layoutFontColor;
   border-top: $layoutBorderWidth solid $layoutBorderColor;
 
   nav {
-    margin: $footerMargin;
+    margin: $margin;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-evenly;
@@ -21,7 +21,7 @@ $footerMargin: 30px;
     }
   }
   p {
-    margin: $footerMargin;
+    margin: $margin;
     text-align: center;
   }
 }
