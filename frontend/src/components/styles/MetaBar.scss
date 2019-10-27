@@ -1,1 +1,13 @@
 @import "../../index.scss";
+
+$metabarHeight: 6vh;
+
+.MetaBar {
+  justify-content: space-between;
+  align-content: center;
+
+  height: $metabarHeight;
+
+  background-color: $layoutBgColor;
+  color: $layoutFontColor;
+}
