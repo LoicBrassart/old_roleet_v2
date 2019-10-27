@@ -6,6 +6,15 @@ $layoutBorderColor: #c40000;
 $layoutBorderWidth: 2px;
 $layoutFontColor: #e5e5e5;
 
+$layoutMetabarHeight: 6vh;
+$layoutRoleetbarHeight: 9vh;
+$layoutFooterHeight: 25vh;
+//$layoutContentHeight: calc(60vh - 2 * #{$layoutBorderWidth});
+$layoutContentHeight: calc(
+  100vh - #{$layoutMetabarHeight} - #{$layoutRoleetbarHeight} - #{$layoutFooterHeight} -
+    2 * #{$layoutBorderWidth}
+);
+
 /* ------------------------ Helper classes */
 .wip {
   border: 1px dotted green;

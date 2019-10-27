@@ -9,7 +9,7 @@ export default function App() {
     <>
       <MetaBar />
       <RoleetBar />
-      App
+      <div id="Content">Content</div>
       <Footer />
     </>
   );
