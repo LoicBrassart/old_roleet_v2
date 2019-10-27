@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./styles/Footer.scss";
 
 export default function Footer() {
@@ -52,7 +53,9 @@ export default function Footer() {
           <ul>
             <li>Nous contacter</li>
             <li>Mentions légales</li>
-            <li>Contributeurs</li>
+            <li>
+              <Link to="/contributors">Contributeurs</Link>
+            </li>
           </ul>
         </div>
       </nav>
