@@ -1,0 +1,25 @@
+/* ------------------------ Variables */
+
+/* ----- Layout */
+$layoutBgColor: #151515;
+$layoutBorderColor: #c40000;
+$layoutBorderWidth: 2px;
+$layoutFontColor: #e5e5e5;
+
+/* ------------------------ Helper classes */
+.wip {
+  border: 1px dotted green;
+}
+.flexer {
+  display: flex;
+  flex-flow: row wrap;
+}
+.center {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+.hidden {
+  display: none;
+}
