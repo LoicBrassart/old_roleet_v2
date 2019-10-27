@@ -9,11 +9,18 @@ $layoutFontColor: #e5e5e5;
 $layoutMetabarHeight: 6vh;
 $layoutRoleetbarHeight: 9vh;
 $layoutFooterHeight: 25vh;
-//$layoutContentHeight: calc(60vh - 2 * #{$layoutBorderWidth});
 $layoutContentHeight: calc(
   100vh - #{$layoutMetabarHeight} - #{$layoutRoleetbarHeight} - #{$layoutFooterHeight} -
     2 * #{$layoutBorderWidth}
 );
+
+/* ------------------------ General styles */
+a,
+a:active,
+a:focus {
+  outline: none;
+  text-decoration: none;
+}
 
 /* ------------------------ Helper classes */
 .wip {
