@@ -18,6 +18,14 @@ Website developped to train a bit in tech
 - Add basic layout components (header, footer, navbar, ...)
 - Write a first style pass, to get an idea of your layout
 
+#### 3. Routing
+
+- Install `react-router-dom`
+- Add a BrowserRouter to your app
+- Declare your first pages and Routes
+- Add links in your app to these routes
+
 ## Used libraries
 
 - `node-sass`: Use .scss files and make for easier styling
+- `react-router-dom`: Add a router to your app, to ease UX and add browser usability

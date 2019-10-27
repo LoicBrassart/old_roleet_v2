@@ -52,4 +52,11 @@ $avatarBorderRadius: $layoutBorderWidth;
       }
     }
   }
+  a {
+    color: $layoutFontColor;
+
+    &.active {
+      border-bottom: $layoutBorderWidth solid $layoutBorderColor;
+    }
+  }
 }
