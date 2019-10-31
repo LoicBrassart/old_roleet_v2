@@ -35,4 +35,4 @@ Website developped to train a bit in tech
 
 - `node-sass`: Use .scss files and make for easier styling
 - `react-router-dom`: Add a router to your app, to ease UX and add browser usability
-- `dotenv`: Add an env file to your conf
+- `dotenv`: Add an env file to your generic conf
