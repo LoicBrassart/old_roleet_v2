@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import "./styles/RoleetBar.scss";
+import SearchBar from "./SearchBar";
 
 export default function RoleetBar() {
   return (
@@ -15,7 +16,7 @@ export default function RoleetBar() {
         </Link>
       </div>
       <ul className="flexer">
-        <li className="center">SearchOverWebsite</li>
+        <SearchBar />
         <li className="center">
           <NavLink to="/characters" activeClassName="active">
             Personnages
