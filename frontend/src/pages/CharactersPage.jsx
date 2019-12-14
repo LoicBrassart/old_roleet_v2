@@ -1,18 +1,27 @@
 import React, { useState, useEffect } from "react";
 import Characters from "../components/Characters";
-let charData = require("../mockData/characters.json");
+import { api } from "../conf";
 
 export default function CharactersPage() {
-  const [charactersData, setCharactersData] = useState([]);
+  const [characters, setCharacters] = useState([]);
 
   useEffect(() => {
-    setCharactersData(charData);
+    api
+      .get("/characters")
+      .then(({ data }) => {
+        setCharacters(data);
+      })
+      .catch(error => {
+        console.log(
+          "We encountered an error while fetching characters, sorry about that"
+        );
+      });
   }, []);
 
   return (
     <>
       <h2>Personnages</h2>
-      <Characters data={charactersData} />
+      <Characters data={characters} />
     </>
   );
 }

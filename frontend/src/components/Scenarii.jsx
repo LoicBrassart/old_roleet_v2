@@ -1,5 +1,5 @@
 export default function Scenarii({ data }) {
-  return data.map(char => {
-    return char.title;
+  return data.map(scen => {
+    return scen.title;
   });
 }
