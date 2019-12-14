@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { toast } from "react-toastify";
 import Characters from "../components/Characters";
 import { api } from "../conf";
 
@@ -12,7 +13,7 @@ export default function CharactersPage() {
         setCharacters(data);
       })
       .catch(error => {
-        console.log(
+        toast.error(
           "We encountered an error while fetching characters, sorry about that"
         );
       });

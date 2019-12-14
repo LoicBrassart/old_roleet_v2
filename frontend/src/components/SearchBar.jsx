@@ -114,7 +114,7 @@ export default function SearchBar() {
     if (Date.now() - lastCall < 200) return;
     fetchData(needle);
     setLastCall(Date.now());
-  }, [needle]);
+  }, [needle, lastCall]);
 
   return (
     <li id="SearchBar" className="center">

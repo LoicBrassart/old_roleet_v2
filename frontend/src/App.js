@@ -1,5 +1,7 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "./App.scss";
 import HomePage from "./pages/HomePage";
 import CharactersPage from "./pages/CharactersPage";
@@ -25,6 +27,7 @@ export default function App() {
         </Switch>
       </div>
       <Footer />
+      <ToastContainer position={toast.POSITION.BOTTOM_RIGHT} />
     </>
   );
 }
