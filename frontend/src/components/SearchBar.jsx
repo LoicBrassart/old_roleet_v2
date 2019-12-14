@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./styles/SearchBar.scss";
 
+import { api } from "../conf";
+
 let charData = require("../mockData/characters.json");
 let scenData = require("../mockData/scenarii.json");
 let usersData = require("../mockData/users.json");
@@ -72,38 +74,48 @@ export default function SearchBar() {
   const [scenarii, setScens] = useState([]);
   const [users, setUsers] = useState([]);
 
+  const fetchData = needle => {
+    api.get("/characters").then(({ data }) => {
+      setChars(
+        data.filter(char => {
+          return (
+            char.name
+              .trim()
+              .toLowerCase()
+              .indexOf(needle) !== -1
+          );
+        })
+      );
+    });
+    api.get("/users").then(({ data }) => {
+      setUsers(
+        data.filter(user => {
+          return (
+            user.pseudo
+              .trim()
+              .toLowerCase()
+              .indexOf(needle) !== -1
+          );
+        })
+      );
+    });
+    api.get("/scenarii").then(({ data }) => {
+      setScens(
+        data.filter(scen => {
+          return (
+            scen.title
+              .trim()
+              .toLowerCase()
+              .indexOf(needle) !== -1
+          );
+        })
+      );
+    });
+  };
+
   useEffect(() => {
     if (!needle) return;
-    setChars(
-      charData.filter(char => {
-        return (
-          char.name
-            .trim()
-            .toLowerCase()
-            .indexOf(needle) !== -1
-        );
-      })
-    );
-    setScens(
-      scenData.filter(scen => {
-        return (
-          scen.title
-            .trim()
-            .toLowerCase()
-            .indexOf(needle) !== -1
-        );
-      })
-    );
-    setUsers(
-      usersData.filter(user => {
-        return (
-          user.pseudo
-            .trim()
-            .toLowerCase()
-            .indexOf(needle) !== -1
-        );
-      })
-    );
+    fetchData(needle);
   }, [needle]);
 
   return (
