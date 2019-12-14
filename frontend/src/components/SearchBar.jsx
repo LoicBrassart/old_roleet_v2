@@ -1,10 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./styles/SearchBar.scss";
-
-let charData = require("../mockData/characters.json");
-let scenData = require("../mockData/scenarii.json");
-let usersData = require("../mockData/users.json");
+import { api } from "../conf";
 
 const icons = ["ಠ_ಠ", "( ͠° ͟ʖ ͠°)", "(v°_°v)", "¬_¬", "(；⌣̀_⌣́)"];
 function NoResult() {
@@ -71,39 +68,52 @@ export default function SearchBar() {
   const [chars, setChars] = useState([]);
   const [scenarii, setScens] = useState([]);
   const [users, setUsers] = useState([]);
+  const [lastCall, setLastCall] = useState(Date.now());
+
+  const fetchData = needle => {
+    api.get("/characters").then(({ data }) => {
+      setChars(
+        data.filter(char => {
+          return (
+            char.name
+              .trim()
+              .toLowerCase()
+              .indexOf(needle) !== -1
+          );
+        })
+      );
+    });
+    api.get("/users").then(({ data }) => {
+      setUsers(
+        data.filter(user => {
+          return (
+            user.pseudo
+              .trim()
+              .toLowerCase()
+              .indexOf(needle) !== -1
+          );
+        })
+      );
+    });
+    api.get("/scenarii").then(({ data }) => {
+      setScens(
+        data.filter(scen => {
+          return (
+            scen.title
+              .trim()
+              .toLowerCase()
+              .indexOf(needle) !== -1
+          );
+        })
+      );
+    });
+  };
 
   useEffect(() => {
     if (!needle) return;
-    setChars(
-      charData.filter(char => {
-        return (
-          char.name
-            .trim()
-            .toLowerCase()
-            .indexOf(needle) !== -1
-        );
-      })
-    );
-    setScens(
-      scenData.filter(scen => {
-        return (
-          scen.title
-            .trim()
-            .toLowerCase()
-            .indexOf(needle) !== -1
-        );
-      })
-    );
-    setUsers(
-      usersData.filter(user => {
-        return (
-          user.pseudo
-            .trim()
-            .toLowerCase()
-            .indexOf(needle) !== -1
-        );
-      })
-    );
+    if (Date.now() - lastCall < 200) return;
+    fetchData(needle);
+    setLastCall(Date.now());
   }, [needle]);
 
   return (
