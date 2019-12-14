@@ -1,12 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./styles/SearchBar.scss";
-
 import { api } from "../conf";
-
-let charData = require("../mockData/characters.json");
-let scenData = require("../mockData/scenarii.json");
-let usersData = require("../mockData/users.json");
 
 const icons = ["ಠ_ಠ", "( ͠° ͟ʖ ͠°)", "(v°_°v)", "¬_¬", "(；⌣̀_⌣́)"];
 function NoResult() {
@@ -73,6 +68,7 @@ export default function SearchBar() {
   const [chars, setChars] = useState([]);
   const [scenarii, setScens] = useState([]);
   const [users, setUsers] = useState([]);
+  const [lastCall, setLastCall] = useState(Date.now());
 
   const fetchData = needle => {
     api.get("/characters").then(({ data }) => {
@@ -115,7 +111,9 @@ export default function SearchBar() {
 
   useEffect(() => {
     if (!needle) return;
+    if (Date.now() - lastCall < 200) return;
     fetchData(needle);
+    setLastCall(Date.now());
   }, [needle]);
 
   return (
