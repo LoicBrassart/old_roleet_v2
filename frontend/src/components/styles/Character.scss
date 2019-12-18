@@ -1,13 +1,18 @@
+@import "../../index.scss";
+
+$width: 30vw;
+$height: calc(#{$width}* 1.35);
+
 .Character {
-  width: 450px;
-  height: 600px;
-  margin: 15px;
-  border: 1px solid white;
+  width: $width;
+  height: $height;
+  margin: $cardMargin;
+  border: 1px solid $cardBgColor;
   border-radius: 4px;
-  background-color: white;
+  background-color: $cardBgColor;
   position: relative;
   overflow: hidden;
-  color: black;
+  color: $cardFontColor;
 
   &:hover > aside {
     right: 0;
@@ -25,7 +30,6 @@
     background-color: transparent;
     top: 0;
     right: -100%;
-    z-index: 1;
     transition: right 0.4s;
   }
 
@@ -40,7 +44,6 @@
     cursor: pointer;
     border: none;
     position: relative;
-    z-index: 1;
     border-radius: 4px 4px 0 0;
     color: black;
     font-family: "Coda", cursive;
