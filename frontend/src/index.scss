@@ -6,6 +6,8 @@ $layoutBorderColor: #c40000;
 $layoutBorderWidth: 2px;
 $layoutFontColor: #e5e5e5;
 
+$transitionDuration: 0.2s;
+
 $layoutMetabarHeight: 6vh;
 $layoutRoleetbarHeight: 9vh;
 $layoutFooterHeight: 25vh;
@@ -21,6 +23,10 @@ $cardMargin: 15px;
 $cardFont: "Coda", cursive;
 $cardWidth: 30vw;
 $cardHeight: calc(#{$cardWidth}* 1.35);
+
+/* ----- Cards */
+$tagBgColor: rgba(169, 169, 169, 0.32);
+$tagFontColor: dimgrey;
 
 /* ------------------------ General styles */
 a,
