@@ -30,52 +30,53 @@ $unselectedTabBackgroundColor: rgba($cardBgColor, 0.5);
     background-color: transparent;
     top: 0;
     right: -100%;
-    transition: right 0.4s;
-  }
+    transition: right $transitionDuration;
 
-  > aside nav {
-    width: 100%;
-    display: flex;
-  }
+    nav {
+      width: 100%;
+      display: flex;
 
-  > aside nav button {
-    display: block;
-    padding: 16px 10px;
-    cursor: pointer;
-    border: none;
-    position: relative;
-    border-radius: 4px 4px 0 0;
-    color: $cardFontColor;
-    font-family: $cardFont;
-    font-weight: 400;
-    transition: border 0.4s, background-color 0.4s;
-    background-color: $unselectedTabBackgroundColor;
-  }
+      button {
+        display: block;
+        padding: 16px 10px;
+        cursor: pointer;
+        border: none;
+        position: relative;
+        border-radius: 4px 4px 0 0;
+        color: $cardFontColor;
+        font-family: $cardFont;
+        font-weight: 400;
+        transition: border $transitionDuration,
+          background-color $transitionDuration;
+        background-color: $unselectedTabBackgroundColor;
 
-  > aside nav button span {
-    position: absolute;
-    display: block;
-    bottom: 0;
-    left: 0;
-    height: 1px;
-    width: 0;
-    background-color: $cardBgColor;
-    transition: bottom 0.4s, width 0.4s;
-  }
+        span {
+          position: absolute;
+          display: block;
+          bottom: 0;
+          left: 0;
+          height: 1px;
+          width: 0;
+          background-color: $cardBgColor;
+          transition: bottom $transitionDuration, width $transitionDuration;
+        }
+      }
+    }
 
-  > aside article {
-    display: none;
-    border: 1px solid $cardBgColor;
-    border-radius: 0 4px 4px 4px;
-    overflow: auto;
-    height: calc(100% - 50px);
-    position: relative;
-    background-color: $overlayBackgroundColor;
-    padding: 0 15px 10px;
-  }
+    article {
+      display: none;
+      border: 1px solid $cardBgColor;
+      border-radius: 0 4px 4px 4px;
+      overflow: auto;
+      height: calc(100% - 50px);
+      position: relative;
+      background-color: $overlayBackgroundColor;
+      padding: 0 15px 10px;
 
-  > aside article h3 {
-    margin: 20px 0;
+      h3 {
+        margin: 20px 0;
+      }
+    }
   }
 
   span {
@@ -97,14 +98,14 @@ $unselectedTabBackgroundColor: rgba($cardBgColor, 0.5);
   }
 
   .buttonSelected {
-    border: 1px solid $cardBgColor !important;
-    border-bottom: none !important;
+    border: 1px solid $cardBgColor;
+    border-bottom: none;
     background-color: $overlayBackgroundColor;
-  }
 
-  .buttonSelected span {
-    bottom: -1px;
-    width: 100%;
+    span {
+      bottom: -1px;
+      width: 100%;
+    }
   }
 
   .articleSelected {
@@ -119,31 +120,32 @@ $unselectedTabBackgroundColor: rgba($cardBgColor, 0.5);
     border-radius: 10px 10px 0 0;
   }
 
-  article p {
-    font-size: 18px;
-    font-family: $cardFont;
-    font-weight: 400;
-  }
+  article {
+    p {
+      font-size: 18px;
+      font-family: $cardFont;
+      font-weight: 400;
+    }
+    aside {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      position: absolute;
+      width: calc(100% - 60px);
+      bottom: 30px;
+      left: 30px;
 
-  article aside {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    position: absolute;
-    width: calc(100% - 60px);
-    bottom: 30px;
-    left: 30px;
-  }
-
-  article aside span {
-    display: block;
-    color: dimgrey;
-    background-color: rgba(169, 169, 169, 0.32);
-    font-size: 15px;
-    padding: 5px 9px;
-    margin: 7px auto;
-    border-radius: 5px;
-    font-family: $cardFont;
-    font-weight: 800;
+      span {
+        display: block;
+        color: $tagFontColor;
+        background-color: $tagBgColor;
+        font-size: 15px;
+        padding: 5px 9px;
+        margin: 7px auto;
+        border-radius: 5px;
+        font-family: $cardFont;
+        font-weight: 800;
+      }
+    }
   }
 }
