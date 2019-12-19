@@ -6,6 +6,8 @@ $layoutBorderColor: #c40000;
 $layoutBorderWidth: 2px;
 $layoutFontColor: #e5e5e5;
 
+$transitionDuration: 0.3s;
+
 $layoutMetabarHeight: 6vh;
 $layoutRoleetbarHeight: 9vh;
 $layoutFooterHeight: 25vh;
@@ -14,12 +16,32 @@ $layoutContentHeight: calc(
     2 * #{$layoutBorderWidth}
 );
 
+/* ----- Cards */
+$cardBgColor: #151515;
+$cardFontColor: #e5e5e5;
+$cardMargin: 15px;
+$cardFont: "Coda", cursive;
+$cardWidth: 30vw;
+$cardHeight: calc(#{$cardWidth}* 1.35);
+
+/* ----- Cards */
+$tagBgColor: rgba(169, 169, 169, 0.32);
+$tagFontColor: dimgrey;
+
 /* ------------------------ General styles */
 a,
 a:active,
 a:focus {
   outline: none;
   text-decoration: none;
+}
+
+* {
+  scrollbar-color: $layoutBorderColor transparent;
+  scrollbar-width: none;
+}
+#root * {
+  scrollbar-width: thin;
 }
 
 /* ------------------------ Helper classes */

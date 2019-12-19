@@ -1,0 +1,154 @@
+@import "../../index.scss";
+
+$overlayBackgroundColor: rgba($cardBgColor, 0.95);
+$unselectedTabBackgroundColor: rgba($cardBgColor, 0.5);
+$overlayMargin: 10px;
+$overlayWidth: calc(100% - (2 * #{$overlayMargin}));
+$overlayHeight: calc(100% - (2 * #{$overlayMargin}));
+
+.Character {
+  width: $cardWidth;
+  height: $cardHeight;
+  margin: $cardMargin;
+  border: 1px solid $cardBgColor;
+  border-radius: 4px;
+  background-color: $cardBgColor;
+  position: relative;
+  overflow: hidden;
+  color: $cardFontColor;
+
+  &:hover > aside {
+    left: 0;
+  }
+
+  > article {
+    padding: 30px;
+  }
+
+  > aside {
+    position: absolute;
+    width: $overlayWidth;
+    height: $overlayHeight;
+    padding: $overlayMargin;
+    background-color: transparent;
+    top: 0;
+    left: 100%;
+    transition: left $transitionDuration;
+
+    nav {
+      width: 100%;
+      display: flex;
+
+      button {
+        display: block;
+        padding: 16px 10px;
+        cursor: pointer;
+        border: none;
+        position: relative;
+        border-radius: 4px 4px 0 0;
+        color: $cardFontColor;
+        font-family: $cardFont;
+        font-weight: 400;
+        transition: border $transitionDuration,
+          background-color $transitionDuration;
+        background-color: $unselectedTabBackgroundColor;
+
+        span {
+          position: absolute;
+          display: block;
+          bottom: 0;
+          left: 0;
+          height: 1px;
+          width: 0;
+          background-color: $cardBgColor;
+          transition: bottom $transitionDuration, width $transitionDuration;
+        }
+      }
+    }
+
+    article {
+      display: none;
+      border: 1px solid $cardBgColor;
+      border-radius: 0 4px 4px 4px;
+      overflow: auto;
+      height: calc(100% - 50px);
+      position: relative;
+      background-color: $overlayBackgroundColor;
+      padding: 0 15px 10px;
+
+      h3 {
+        margin: 20px 0;
+      }
+    }
+  }
+
+  span {
+    color: dimgrey;
+    text-decoration: none;
+  }
+
+  h2,
+  h3 {
+    font-size: 30px;
+    margin: 20px 0;
+    font-family: $cardFont;
+    font-weight: 400;
+  }
+
+  button {
+    border: none;
+    background-color: transparent;
+  }
+
+  .buttonSelected {
+    border: 1px solid $cardBgColor;
+    border-bottom: none;
+    background-color: $overlayBackgroundColor;
+
+    span {
+      bottom: -1px;
+      width: 100%;
+    }
+  }
+
+  .articleSelected {
+    display: block;
+  }
+
+  img {
+    display: block;
+    height: 50%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+  }
+
+  article {
+    p {
+      font-size: 18px;
+      font-family: $cardFont;
+      font-weight: 400;
+    }
+    aside {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      position: absolute;
+      width: calc(100% - 60px);
+      bottom: 30px;
+      left: 30px;
+
+      span {
+        display: block;
+        color: $tagFontColor;
+        background-color: $tagBgColor;
+        font-size: 15px;
+        padding: 5px 9px;
+        margin: 7px auto;
+        border-radius: 5px;
+        font-family: $cardFont;
+        font-weight: 800;
+      }
+    }
+  }
+}
