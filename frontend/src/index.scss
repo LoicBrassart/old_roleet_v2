@@ -6,7 +6,7 @@ $layoutBorderColor: #c40000;
 $layoutBorderWidth: 2px;
 $layoutFontColor: #e5e5e5;
 
-$transitionDuration: 0.2s;
+$transitionDuration: 0.3s;
 
 $layoutMetabarHeight: 6vh;
 $layoutRoleetbarHeight: 9vh;
@@ -34,6 +34,14 @@ a:active,
 a:focus {
   outline: none;
   text-decoration: none;
+}
+
+* {
+  scrollbar-color: $layoutBorderColor transparent;
+  scrollbar-width: none;
+}
+#root * {
+  scrollbar-width: thin;
 }
 
 /* ------------------------ Helper classes */
