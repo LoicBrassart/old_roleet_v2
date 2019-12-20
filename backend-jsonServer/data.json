@@ -43,7 +43,84 @@
       ],
       "characterSheets": [
         {
-          "gameSystem": "Dungeons & Dragons 3.5"
+          "gameSystem": "Loups-Garous : les Déchus",
+          "attributes": {
+            "intelligence": 1,
+            "astuce": 1,
+            "resolution": 1,
+            "force": 1,
+            "dexterite": 1,
+            "vigueur": 1,
+            "presence": 1,
+            "manipulation": 1,
+            "calme": 1
+          },
+          "civilState": {
+            "experience": 0,
+            "concept": "Concept",
+            "vertu": "Vertu",
+            "vice": "Vice",
+            "auspice": "Auspice",
+            "tribu": "Tribu",
+            "loge": "Loge",
+            "volonteMax": 10,
+            "volonte": 5,
+            "santeMax": 10,
+            "sante": 5,
+            "essence": 5,
+            "appelPrimal": 5,
+            "atouts": [
+              {
+                "label": "Atout 1",
+                "level": 5
+              },
+              {
+                "label": "Atout 2",
+                "level": 2
+              }
+            ],
+            "handicaps": ["Handicap 1", "Handicap 2"],
+            "harmonie": 10,
+            "renom": {
+              "purete": 5,
+              "gloire": 2,
+              "honneur": 3,
+              "sagesse": 0,
+              "ruse": 1
+            }
+          },
+          "skills": {
+            "mental": {
+              "artisanat": 1,
+              "erudition": 1,
+              "informatique": 1,
+              "investigation": 1,
+              "medecine": 1,
+              "occultisme": 1,
+              "politique": 1,
+              "sciences": 1
+            },
+            "physique": {
+              "armesBlanches": 1,
+              "armesAFeu": 1,
+              "athletisme": 1,
+              "bagarre": 1,
+              "conduite": 1,
+              "discretion": 1,
+              "larcin": 1,
+              "survie": 1
+            },
+            "social": {
+              "animaux": 1,
+              "empathie": 1,
+              "expression": 1,
+              "intimidation": 1,
+              "persuasion": 1,
+              "entregent": 1,
+              "connaissancesDeLaRue": 1,
+              "subterfuge": 1
+            }
+          }
         }
       ],
       "author": "5ce422a27cb10713d71ed9c0"
