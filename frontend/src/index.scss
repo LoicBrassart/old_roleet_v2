@@ -55,6 +55,12 @@ a:focus {
   display: flex;
   flex-flow: row wrap;
 }
+.grider {
+  display: grid;
+  &.wip > * {
+    border: 1px dotted red;
+  }
+}
 .center {
   display: flex;
   flex-flow: column wrap;
