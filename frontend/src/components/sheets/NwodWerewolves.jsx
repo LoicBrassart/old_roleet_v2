@@ -3,7 +3,7 @@ import "./styles/NwodWerewolves.scss";
 
 export default function NwodWerewolves({ data }) {
   return (
-    <div className="NwodWerewolves grider wip">
+    <div className="NwodWerewolves grider">
       <div className="watermark" />
       <section>
         <h2>New World of Darkness: Werewolves</h2>
@@ -225,7 +225,66 @@ export default function NwodWerewolves({ data }) {
           </li>
         </ul>
       </section>
-      <section>Autres traits</section>
+      <section>
+        <h3>Autres traits</h3>
+        <div className="flexer">
+          <ul>
+            <li>
+              <h4>Atouts</h4>
+              <ul>
+                <li>_______________</li>
+                <li>_______________</li>
+                <li>_______________</li>
+                <li>_______________</li>
+                <li>_______________</li>
+                <li>_______________</li>
+                <li>_______________</li>
+              </ul>
+            </li>
+            <li>
+              <h4>Handicaps</h4>
+              <ul>
+                <li>_______________</li>
+                <li>_______________</li>
+                <li>_______________</li>
+              </ul>
+            </li>
+            <li>
+              <h4>Attaques</h4>
+              <ul>
+                <li>_______________</li>
+                <li>_______________</li>
+                <li>_______________</li>
+              </ul>
+            </li>
+            <li>
+              <h4>Equipement</h4>
+              <ul>
+                <li>_______________</li>
+                <li>_______________</li>
+                <li>_______________</li>
+              </ul>
+            </li>
+          </ul>
+          <ul>
+            <li>Sante</li>
+            <li>Volonté</li>
+            <li>Essence</li>
+            <li>Appel Primal</li>
+            <li>Harmonie</li>
+            <li>
+              <h4>Renom</h4>
+              <ul>
+                <li>Purete</li>
+                <li>Gloire</li>
+                <li>Honneur</li>
+                <li>Sagesse</li>
+                <li>Ruse</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </section>
     </div>
   );
 }
