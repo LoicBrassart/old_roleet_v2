@@ -1,5 +1,231 @@
 import React from "react";
+import "./styles/NwodWerewolves.scss";
 
 export default function NwodWerewolves({ data }) {
-  return <h3>New World of Darkness: Werewolves</h3>;
+  return (
+    <div className="NwodWerewolves grider wip">
+      <div className="watermark" />
+      <section>
+        <h2>New World of Darkness: Werewolves</h2>
+        <ul className="flexer">
+          <li>
+            <ul className="column">
+              <li>
+                <span>Nom:</span>
+                XXX
+              </li>
+              <li>
+                <span>Joueur:</span>XXX
+              </li>
+              <li>
+                <span>Chronique:</span>XXX
+              </li>
+            </ul>
+          </li>
+          <li>
+            <ul className="column">
+              <li>
+                <span>Concept:</span>
+                {data.civilState.concept}
+              </li>
+              <li>
+                <span>Vertu:</span>
+                {data.civilState.vertu}
+              </li>
+              <li>
+                <span>Vice:</span>
+                {data.civilState.vice}
+              </li>
+            </ul>
+          </li>
+          <li>
+            <ul className="column">
+              <li>
+                <span>Auspice:</span>
+                {data.civilState.auspice}
+              </li>
+              <li>
+                <span>Tribu:</span>
+                {data.civilState.tribu}
+              </li>
+              <li>
+                <span>Loge:</span>
+                {data.civilState.loge}
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h3>Attributs</h3>
+        <ul className="flexer">
+          <li>
+            <ul className="column">
+              <li>
+                <span>Intelligence:</span>
+                {data.attributes.intelligence}
+              </li>
+              <li>
+                <span>Astuce:</span>
+                {data.attributes.astuce}
+              </li>
+              <li>
+                <span>Resolution:</span>
+                {data.attributes.resolution}
+              </li>
+            </ul>
+          </li>
+          <li>
+            <ul className="column">
+              <li>
+                <span>Force:</span>
+                {data.attributes.force}
+              </li>
+              <li>
+                <span>Dexterite:</span>
+                {data.attributes.dexterite}
+              </li>
+              <li>
+                <span>Vigueur:</span>
+                {data.attributes.vigueur}
+              </li>
+            </ul>
+          </li>
+          <li>
+            <ul className="column">
+              <li>
+                <span>Presence:</span>
+                {data.attributes.presence}
+              </li>
+              <li>
+                <span>Manipulation:</span>
+                {data.attributes.manipulation}
+              </li>
+              <li>
+                <span>Calme:</span>
+                {data.attributes.calme}
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h3>Competences</h3>
+        <ul>
+          <li>
+            <h4>Mentales</h4>
+            <ul className="column">
+              <li>
+                <span>Artisanat:</span>
+                {data.skills.mental.artisanat}
+              </li>
+              <li>
+                <span>Erudition:</span>
+                {data.skills.mental.erudition}
+              </li>
+              <li>
+                <span>Informatique:</span>
+                {data.skills.mental.informatique}
+              </li>
+              <li>
+                <span>Investigation:</span>
+                {data.skills.mental.investigation}
+              </li>
+              <li>
+                <span>Medecine:</span>
+                {data.skills.mental.medecine}
+              </li>
+              <li>
+                <span>Occultisme:</span>
+                {data.skills.mental.occultisme}
+              </li>
+              <li>
+                <span>Politique:</span>
+                {data.skills.mental.politique}
+              </li>
+              <li>
+                <span>Sciences:</span>
+                {data.skills.mental.sciences}
+              </li>
+            </ul>
+          </li>
+          <li>
+            <h4>Physiques</h4>
+            <ul className="column">
+              <li>
+                <span>Armes Blanches:</span>
+                {data.skills.physique.armesBlanches}
+              </li>
+              <li>
+                <span>Arms à Feu:</span>
+                {data.skills.physique.armesAFeu}
+              </li>
+              <li>
+                <span>Athlétisme:</span>
+                {data.skills.physique.athletisme}
+              </li>
+              <li>
+                <span>Bagarre:</span>
+                {data.skills.physique.bagarre}
+              </li>
+              <li>
+                <span>Conduite:</span>
+                {data.skills.physique.conduite}
+              </li>
+              <li>
+                <span>Discrétion:</span>
+                {data.skills.physique.discretion}
+              </li>
+              <li>
+                <span>Larcin:</span>
+                {data.skills.physique.larcin}
+              </li>
+              <li>
+                <span>Survie:</span>
+                {data.skills.physique.survie}
+              </li>
+            </ul>
+          </li>
+          <li>
+            <h4>Sociales</h4>
+            <ul className="column">
+              <li>
+                <span>Animaux:</span>
+                {data.skills.social.animaux}
+              </li>
+              <li>
+                <span>Empathie:</span>
+                {data.skills.social.empathie}
+              </li>
+              <li>
+                <span>Expression:</span>
+                {data.skills.social.expression}
+              </li>
+              <li>
+                <span>Intimidation:</span>
+                {data.skills.social.intimidation}
+              </li>
+              <li>
+                <span>Persuasion:</span>
+                {data.skills.social.persuasion}
+              </li>
+              <li>
+                <span>Entregent:</span>
+                {data.skills.social.entregent}
+              </li>
+              <li>
+                <span>Connaissances de la Rue:</span>
+                {data.skills.social.connaissancesDeLaRue}
+              </li>
+              <li>
+                <span>Subterfuge:</span>
+                {data.skills.social.subterfuge}
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <section>Autres traits</section>
+    </div>
+  );
 }
