@@ -4,6 +4,7 @@
   width: $roundBadgeDiameter;
   height: $roundBadgeDiameter;
   border-radius: 50%;
+  border: $layoutBorderWidth solid $layoutBorderColor;
   overflow: hidden;
 
   img {

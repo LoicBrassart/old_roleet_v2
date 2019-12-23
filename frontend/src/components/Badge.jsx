@@ -4,7 +4,7 @@ import "./styles/Badge.scss";
 
 export default function Badge({ linkTo, imgPath, imgAlt }) {
   return (
-    <li className="Badge wip">
+    <li className="Badge">
       <Link to={linkTo}>
         <img src={imgPath} alt={imgAlt} />
       </Link>
