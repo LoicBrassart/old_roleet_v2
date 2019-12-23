@@ -11,6 +11,7 @@ import ContributorsPage from "./pages/ContributorsPage";
 import MetaBar from "./components/MetaBar";
 import RoleetBar from "./components/RoleetBar";
 import Footer from "./components/Footer";
+import SheetPage from "./pages/SheetPage";
 
 export default function App() {
   return (
@@ -24,6 +25,7 @@ export default function App() {
           <Route path="/scenarii" component={ScenariiPage} />
           <Route path="/groups" component={GroupsPage} />
           <Route path="/contributors" component={ContributorsPage} />
+          <Route path="/sheet/:sheetId" component={SheetPage} />
         </Switch>
       </div>
       <Footer />
