@@ -9,7 +9,7 @@ export default function RoleetBar() {
       <div className="logo center">
         <Link to="/">
           <div>
-            <img src="img/logo.svg" alt="" />
+            <img src="/img/logo.svg" alt="" />
             <h1>Roleet</h1>
           </div>
           <p>May the Dice be with you !</p>
@@ -29,7 +29,7 @@ export default function RoleetBar() {
           <NavLink to="/groups">Groupes</NavLink>
         </li>
         <li className="center">
-          <img src="img/user-avatar-default.png" alt="Mon compte Roleet" />
+          <img src="/img/user-avatar-default.png" alt="Mon compte Roleet" />
         </li>
       </ul>
     </nav>
