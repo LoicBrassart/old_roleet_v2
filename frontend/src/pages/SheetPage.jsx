@@ -6,14 +6,12 @@ import Sheet from "../components/Sheet";
 
 export default function SheetPage() {
   const { sheetId } = useParams();
-  const [game, setGame] = useState("");
   const [data, setData] = useState({});
 
   useEffect(() => {
     api
       .get(`/sheets/${sheetId}`)
       .then(({ data }) => {
-        setGame(data.gameSystem);
         setData(data);
       })
       .catch(error => {
@@ -25,7 +23,7 @@ export default function SheetPage() {
 
   return (
     <>
-      <Sheet game={game} data={data} />
+      <Sheet game={data.gameSystem} data={data} />
     </>
   );
 }
