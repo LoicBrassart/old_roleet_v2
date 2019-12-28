@@ -275,12 +275,39 @@ export default function NwodWerewolves({ data }) {
             <li>Harmonie</li>
             <li>
               <h4>Renom</h4>
-              <ul>
-                <li>Purete</li>
-                <li>Gloire</li>
-                <li>Honneur</li>
-                <li>Sagesse</li>
-                <li>Ruse</li>
+              <ul className="column">
+                <li>
+                  <span className="label">Purete:</span>
+                  <Rating
+                    initialRating={data.civilState.renom.purete}
+                    readonly
+                  />
+                </li>
+                <li>
+                  <span className="label">Gloire:</span>
+                  <Rating
+                    initialRating={data.civilState.renom.gloire}
+                    readonly
+                  />
+                </li>
+                <li>
+                  <span className="label">Honneur:</span>
+                  <Rating
+                    initialRating={data.civilState.renom.honneur}
+                    readonly
+                  />
+                </li>
+                <li>
+                  <span className="label">Sagesse:</span>
+                  <Rating
+                    initialRating={data.civilState.renom.sagesse}
+                    readonly
+                  />
+                </li>
+                <li>
+                  <span className="label">Ruse:</span>
+                  <Rating initialRating={data.civilState.renom.ruse} readonly />
+                </li>
               </ul>
             </li>
           </ul>
