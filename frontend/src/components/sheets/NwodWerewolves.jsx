@@ -1,4 +1,5 @@
 import React from "react";
+import Rating from "react-rating";
 import "./styles/NwodWerewolves.scss";
 
 export default function NwodWerewolves({ data }) {
@@ -11,29 +12,29 @@ export default function NwodWerewolves({ data }) {
           <li>
             <ul className="column">
               <li>
-                <span>Nom:</span>
+                <span className="label">Nom:</span>
                 XXX
               </li>
               <li>
-                <span>Joueur:</span>XXX
+                <span className="label">Joueur:</span>XXX
               </li>
               <li>
-                <span>Chronique:</span>XXX
+                <span className="label">Chronique:</span>XXX
               </li>
             </ul>
           </li>
           <li>
             <ul className="column">
               <li>
-                <span>Concept:</span>
+                <span className="label">Concept:</span>
                 {data.civilState.concept}
               </li>
               <li>
-                <span>Vertu:</span>
+                <span className="label">Vertu:</span>
                 {data.civilState.vertu}
               </li>
               <li>
-                <span>Vice:</span>
+                <span className="label">Vice:</span>
                 {data.civilState.vice}
               </li>
             </ul>
@@ -41,15 +42,15 @@ export default function NwodWerewolves({ data }) {
           <li>
             <ul className="column">
               <li>
-                <span>Auspice:</span>
+                <span className="label">Auspice:</span>
                 {data.civilState.auspice}
               </li>
               <li>
-                <span>Tribu:</span>
+                <span className="label">Tribu:</span>
                 {data.civilState.tribu}
               </li>
               <li>
-                <span>Loge:</span>
+                <span className="label">Loge:</span>
                 {data.civilState.loge}
               </li>
             </ul>
@@ -62,48 +63,48 @@ export default function NwodWerewolves({ data }) {
           <li>
             <ul className="column">
               <li>
-                <span>Intelligence:</span>
-                {data.attributes.intelligence}
+                <span className="label">Intelligence:</span>
+                <Rating initialRating={data.attributes.intelligence} readonly />
               </li>
               <li>
-                <span>Astuce:</span>
-                {data.attributes.astuce}
+                <span className="label">Astuce:</span>
+                <Rating initialRating={data.attributes.astuce} readonly />
               </li>
               <li>
-                <span>Resolution:</span>
-                {data.attributes.resolution}
-              </li>
-            </ul>
-          </li>
-          <li>
-            <ul className="column">
-              <li>
-                <span>Force:</span>
-                {data.attributes.force}
-              </li>
-              <li>
-                <span>Dexterite:</span>
-                {data.attributes.dexterite}
-              </li>
-              <li>
-                <span>Vigueur:</span>
-                {data.attributes.vigueur}
+                <span className="label">Resolution:</span>
+                <Rating initialRating={data.attributes.resolution} readonly />
               </li>
             </ul>
           </li>
           <li>
             <ul className="column">
               <li>
-                <span>Presence:</span>
-                {data.attributes.presence}
+                <span className="label">Force:</span>
+                <Rating initialRating={data.attributes.force} readonly />
               </li>
               <li>
-                <span>Manipulation:</span>
-                {data.attributes.manipulation}
+                <span className="label">Dexterite:</span>
+                <Rating initialRating={data.attributes.dexterite} readonly />
               </li>
               <li>
-                <span>Calme:</span>
-                {data.attributes.calme}
+                <span className="label">Vigueur:</span>
+                <Rating initialRating={data.attributes.vigueur} readonly />
+              </li>
+            </ul>
+          </li>
+          <li>
+            <ul className="column">
+              <li>
+                <span className="label">Presence:</span>
+                <Rating initialRating={data.attributes.presence} readonly />
+              </li>
+              <li>
+                <span className="label">Manipulation:</span>
+                <Rating initialRating={data.attributes.manipulation} readonly />
+              </li>
+              <li>
+                <span className="label">Calme:</span>
+                <Rating initialRating={data.attributes.calme} readonly />
               </li>
             </ul>
           </li>
@@ -116,35 +117,35 @@ export default function NwodWerewolves({ data }) {
             <h4>Mentales</h4>
             <ul className="column">
               <li>
-                <span>Artisanat:</span>
+                <span className="label">Artisanat:</span>
                 {data.skills.mental.artisanat}
               </li>
               <li>
-                <span>Erudition:</span>
+                <span className="label">Erudition:</span>
                 {data.skills.mental.erudition}
               </li>
               <li>
-                <span>Informatique:</span>
+                <span className="label">Informatique:</span>
                 {data.skills.mental.informatique}
               </li>
               <li>
-                <span>Investigation:</span>
+                <span className="label">Investigation:</span>
                 {data.skills.mental.investigation}
               </li>
               <li>
-                <span>Medecine:</span>
+                <span className="label">Medecine:</span>
                 {data.skills.mental.medecine}
               </li>
               <li>
-                <span>Occultisme:</span>
+                <span className="label">Occultisme:</span>
                 {data.skills.mental.occultisme}
               </li>
               <li>
-                <span>Politique:</span>
+                <span className="label">Politique:</span>
                 {data.skills.mental.politique}
               </li>
               <li>
-                <span>Sciences:</span>
+                <span className="label">Sciences:</span>
                 {data.skills.mental.sciences}
               </li>
             </ul>
@@ -153,35 +154,35 @@ export default function NwodWerewolves({ data }) {
             <h4>Physiques</h4>
             <ul className="column">
               <li>
-                <span>Armes Blanches:</span>
+                <span className="label">Armes Blanches:</span>
                 {data.skills.physique.armesBlanches}
               </li>
               <li>
-                <span>Arms à Feu:</span>
+                <span className="label">Arms à Feu:</span>
                 {data.skills.physique.armesAFeu}
               </li>
               <li>
-                <span>Athlétisme:</span>
+                <span className="label">Athlétisme:</span>
                 {data.skills.physique.athletisme}
               </li>
               <li>
-                <span>Bagarre:</span>
+                <span className="label">Bagarre:</span>
                 {data.skills.physique.bagarre}
               </li>
               <li>
-                <span>Conduite:</span>
+                <span className="label">Conduite:</span>
                 {data.skills.physique.conduite}
               </li>
               <li>
-                <span>Discrétion:</span>
+                <span className="label">Discrétion:</span>
                 {data.skills.physique.discretion}
               </li>
               <li>
-                <span>Larcin:</span>
+                <span className="label">Larcin:</span>
                 {data.skills.physique.larcin}
               </li>
               <li>
-                <span>Survie:</span>
+                <span className="label">Survie:</span>
                 {data.skills.physique.survie}
               </li>
             </ul>
@@ -190,35 +191,35 @@ export default function NwodWerewolves({ data }) {
             <h4>Sociales</h4>
             <ul className="column">
               <li>
-                <span>Animaux:</span>
+                <span className="label">Animaux:</span>
                 {data.skills.social.animaux}
               </li>
               <li>
-                <span>Empathie:</span>
+                <span className="label">Empathie:</span>
                 {data.skills.social.empathie}
               </li>
               <li>
-                <span>Expression:</span>
+                <span className="label">Expression:</span>
                 {data.skills.social.expression}
               </li>
               <li>
-                <span>Intimidation:</span>
+                <span className="label">Intimidation:</span>
                 {data.skills.social.intimidation}
               </li>
               <li>
-                <span>Persuasion:</span>
+                <span className="label">Persuasion:</span>
                 {data.skills.social.persuasion}
               </li>
               <li>
-                <span>Entregent:</span>
+                <span className="label">Entregent:</span>
                 {data.skills.social.entregent}
               </li>
               <li>
-                <span>Connaissances de la Rue:</span>
+                <span className="label">Connaissances de la Rue:</span>
                 {data.skills.social.connaissancesDeLaRue}
               </li>
               <li>
-                <span>Subterfuge:</span>
+                <span className="label">Subterfuge:</span>
                 {data.skills.social.subterfuge}
               </li>
             </ul>
