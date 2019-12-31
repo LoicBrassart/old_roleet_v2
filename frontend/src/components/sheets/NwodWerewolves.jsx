@@ -233,22 +233,31 @@ export default function NwodWerewolves({ data }) {
             <li>
               <h4>Atouts</h4>
               <ul>
-                <li>_______________</li>
-                <li>_______________</li>
-                <li>_______________</li>
-                <li>_______________</li>
-                <li>_______________</li>
-                <li>_______________</li>
-                <li>_______________</li>
+                {data.civilState.atouts.map((atout, i) => {
+                  return (
+                    <li>
+                      <span className="label">{atout.label}:</span>
+                      {atout.level}
+                    </li>
+                  );
+                })}
               </ul>
             </li>
             <li>
-              <h4>Handicaps</h4>
-              <ul>
-                <li>_______________</li>
-                <li>_______________</li>
-                <li>_______________</li>
-              </ul>
+              {data.civilState.handicaps ? (
+                <>
+                  <h4>Handicaps</h4>{" "}
+                  <ul>
+                    {data.civilState.handicaps.map((handicap, i) => {
+                      return (
+                        <li>
+                          <span className="label">{handicap}</span>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </>
+              ) : null}
             </li>
             <li>
               <h4>Attaques</h4>
