@@ -292,7 +292,7 @@
             "level": 2
           }
         ],
-        "handicaps": ["Handicap 1", "Handicap 2"],
+        "handicaps": ["Handicap1", "Handi2"],
         "harmonie": 10,
         "renom": {
           "purete": 5,
