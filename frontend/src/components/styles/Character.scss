@@ -21,6 +21,11 @@ $overlayHeight: calc(100% - (2 * #{$overlayMargin}));
     left: 0;
   }
 
+  .systems {
+    display: flex;
+    justify-content: space-between;
+  }
+
   > article {
     padding: 30px;
   }
@@ -121,6 +126,7 @@ $overlayHeight: calc(100% - (2 * #{$overlayMargin}));
     width: 100%;
     object-fit: cover;
     border-radius: 10px 10px 0 0;
+    border-bottom: $layoutBorderWidth solid $layoutBorderColor;
   }
 
   article {

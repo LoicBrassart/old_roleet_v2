@@ -1,0 +1,15 @@
+@import "../../index.scss";
+
+$shadowColor: rgba(0, 0, 0, 0.53);
+$shadowBlur: 15px;
+$sheetWidth: calc(80vw - 2 * #{$shadowBlur});
+$sheetHeight: calc(#{$sheetWidth} / 681 * 1024);
+$sheetMargin: $shadowBlur;
+
+.Sheet {
+  background: url("/img/parchment.jpg");
+  width: $sheetWidth;
+  height: $sheetHeight;
+  margin: auto;
+  box-shadow: 0px 0px $shadowBlur 0px $shadowColor;
+}

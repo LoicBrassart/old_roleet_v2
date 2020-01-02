@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import "./styles/Character.scss";
+import Badge from "./Badge";
 
 const FluffsTab = ({ fluffs }) => (
   <article className="descriptionArticle articleSelected">
@@ -17,12 +17,15 @@ const FluffsTab = ({ fluffs }) => (
 
 const SheetsTab = ({ sheets }) => (
   <article className="sheetsArticle articleSelected">
-    <ul>
+    <ul className="systems">
       {sheets.map((sheet, i) => {
         return (
-          <li key={i}>
-            <Link to="/">{sheet.gameSystem}</Link>
-          </li>
+          <Badge
+            key={i}
+            imgPath={`/img/gamesystems/${sheet.gameSystemImg}`}
+            linkTo={`/sheet/${sheet.sheet}`}
+            imgAlt={sheet.gameSystem}
+          />
         );
       })}
     </ul>

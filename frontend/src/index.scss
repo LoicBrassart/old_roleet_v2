@@ -5,6 +5,7 @@ $layoutBgColor: #151515;
 $layoutBorderColor: #c40000;
 $layoutBorderWidth: 2px;
 $layoutFontColor: #e5e5e5;
+$layoutMargin: 20px;
 
 $transitionDuration: 0.3s;
 
@@ -24,9 +25,12 @@ $cardFont: "Coda", cursive;
 $cardWidth: 30vw;
 $cardHeight: calc(#{$cardWidth}* 1.35);
 
-/* ----- Cards */
+/* ----- Tags */
 $tagBgColor: rgba(169, 169, 169, 0.32);
 $tagFontColor: dimgrey;
+
+/* ----- Round Badges */
+$roundBadgeDiameter: 100px;
 
 /* ------------------------ General styles */
 a,
@@ -51,6 +55,12 @@ a:focus {
 .flexer {
   display: flex;
   flex-flow: row wrap;
+}
+.grider {
+  display: grid;
+  &.wip > * {
+    border: 1px dotted red;
+  }
 }
 .center {
   display: flex;

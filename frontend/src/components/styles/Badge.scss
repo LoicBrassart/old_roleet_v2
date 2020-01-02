@@ -1,0 +1,15 @@
+@import "../../index.scss";
+
+.Badge {
+  width: $roundBadgeDiameter;
+  height: $roundBadgeDiameter;
+  border-radius: 50%;
+  border: $layoutBorderWidth solid $layoutBorderColor;
+  overflow: hidden;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
