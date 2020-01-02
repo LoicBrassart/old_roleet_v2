@@ -10,6 +10,6 @@ $sheetMargin: $shadowBlur;
   background: url("/img/parchment.jpg");
   width: $sheetWidth;
   height: $sheetHeight;
-  margin: auto $shadowBlur;
+  margin: auto;
   box-shadow: 0px 0px $shadowBlur 0px $shadowColor;
 }
