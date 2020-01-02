@@ -235,8 +235,10 @@ export default function NwodWerewolves({ data }) {
               <ul>
                 {data.civilState.atouts.map((atout, i) => {
                   return (
-                    <li>
-                      <span className="label">{atout.label}:</span>
+                    <li key={i}>
+                      <span key={i} className="label">
+                        {atout.label}:
+                      </span>
                       {atout.level}
                     </li>
                   );
@@ -250,8 +252,10 @@ export default function NwodWerewolves({ data }) {
                   <ul>
                     {data.civilState.handicaps.map((handicap, i) => {
                       return (
-                        <li>
-                          <span className="label">{handicap}</span>
+                        <li key={i}>
+                          <span key={i} className="label">
+                            {handicap}
+                          </span>
                         </li>
                       );
                     })}
