@@ -4,17 +4,18 @@ Website developped to train a bit in tech
 
 ## How to use this repo
 
-Install yarn if not already on your system.
-Once everything is installed, go to frontend folder and use `yarn install` to add every required modules.
-Then load the json server and start the react scripts in new consoles. 
+Install npm if not already on your system.
+Install json-server globally if you not already have it.
+`npm install -g json-server`
 
-### Linux
+Once everything is installed, go to frontend folder and use `npm install` to add every required modules.
+Then start the react scripts in new console. 
+If you are using gnome-terminal, this should be done by `gnome-terminal -e "npm start"`
+If you are using PowerShell, this should be done by `Start-Process npm -ArgumentList "start"`
 
-If you are using gnome-terminal, this should be done by `gnome-terminal -e "yarn load:json" ; gnome-terminal -e "yarn start"`
-
-### Windows
-
-If you are using PowerShell, this should be done by `Start-Process yarn -ArgumentList "load:json" ; Start-Process yarn -ArgumentList "start"`
+You also need to run the json server for the site to work correctly.
+In the backend-jsonServer folder, launch
+`json-server data.json --port 4040` (currently we are useing 4040 port to get data from the json)
 
 
 ## Steps to reproduce
