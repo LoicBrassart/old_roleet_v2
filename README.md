@@ -2,6 +2,21 @@
 
 Website developped to train a bit in tech
 
+## How to use this repo
+
+Install yarn if not already on your system.
+Once everything is installed, go to frontend folder and use `yarn install` to add every required modules.
+Then load the json server and start the react scripts in new consoles. 
+
+### Linux
+
+If you are using gnome-terminal, this should be done by `gnome-terminal -e "yarn load:json" ; gnome-terminal -e "yarn start"`
+
+### Windows
+
+If you are using PowerShell, this should be done by `Start-Process yarn -ArgumentList "load:json" ; Start-Process yarn -ArgumentList "start"`
+
+
 ## Steps to reproduce
 
 ### Frontend
