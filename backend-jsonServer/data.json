@@ -345,8 +345,45 @@
       "created_at": "2019-06-04T09:55:29.486Z",
       "updated_at": "2019-06-04T09:58:03.217Z",
       "published_at": "2019-06-04T12:00:00.007Z",
-      "title": "Hello World !",
-      "content": "Well, it's good to be home at last! Now, it should go without saying that this website is -and will remain!- under construction for quite a long time, it's a spare time project. What I'd like is a website where everybody can come and recors tehir characters, to share with the community *and* for our Masters to recycle them as NPCs in theiir own campaigns. Begone with the twentieth soldier named 'Bob' by lack of inspiration : now every NPC could have his behaviour, his fight style, his description, and so on !"
+      "title": "Hello Roleet !",
+      "content": "Well, it's good to be home at last! Now, it should go without saying that this website is -and will remain!- under construction for quite a long time, it's a spare time project. What I'd like is a website where everybody can come and recors tehir characters, to share with the community *and* for our Masters to recycle them as NPCs in theiir own campaigns. Begone with the twentieth soldier named 'Bob' by lack of inspiration : now every NPC could have his behaviour, his fight style, his description, and so on !",
+      "tags": ["Roleet", "Blog"]
+    },
+    {
+      "author": {
+        "_id": "5ce422a27cb10713d71ed9c0",
+        "pseudo": "Loïc"
+      },
+      "created_at": "2019-06-04T09:55:29.486Z",
+      "updated_at": "2019-06-04T09:58:03.217Z",
+      "published_at": "2019-06-04T12:00:00.007Z",
+      "title": "New falafel recipe !",
+      "content": "(This article shouldn't appear on Roleet, 'cause of the lack of tags 'Roleet' and 'Blog')",
+      "tags": ["Receet"]
+    },
+    {
+      "author": {
+        "_id": "5ce422a27cb10713d71ed9c0",
+        "pseudo": "Loïc"
+      },
+      "created_at": "2019-06-04T09:55:29.486Z",
+      "updated_at": "2019-06-04T09:58:03.217Z",
+      "published_at": "2019-06-04T12:00:00.007Z",
+      "title": "New features !",
+      "content": "We just added a Blog page to this website, with full-support of incoming meta-website blog",
+      "tags": ["Roleet"]
+    },
+    {
+      "author": {
+        "_id": "5ce422a27cb10713d71ed9c0",
+        "pseudo": "Loïc"
+      },
+      "created_at": "2019-06-04T09:55:29.486Z",
+      "updated_at": "2019-06-04T09:58:03.217Z",
+      "published_at": "2019-06-04T12:00:00.007Z",
+      "title": "Hello Receet !",
+      "content": "This article should appear on Roleet because it has the 'Blog' tag",
+      "tags": ["Receet", "Blog"]
     }
   ]
 }
