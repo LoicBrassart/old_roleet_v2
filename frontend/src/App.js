@@ -5,6 +5,7 @@ import "react-toastify/dist/ReactToastify.css";
 import "./App.scss";
 import HomePage from "./pages/HomePage";
 import BlogPage from "./pages/BlogPage";
+import ArticlePage from "./pages/ArticlePage";
 import CharactersPage from "./pages/CharactersPage";
 import ScenariiPage from "./pages/ScenariiPage";
 import GroupsPage from "./pages/GroupsPage";
@@ -22,6 +23,7 @@ export default function App() {
       <div id="Content">
         <Switch>
           <Route exact path="/" component={HomePage} />
+          <Route path="/blog/:articleId" component={ArticlePage} />
           <Route path="/blog" component={BlogPage} />
           <Route path="/characters" component={CharactersPage} />
           <Route path="/scenarii" component={ScenariiPage} />
