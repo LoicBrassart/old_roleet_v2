@@ -21,9 +21,5 @@ export default function SheetPage() {
       });
   }, [sheetId]);
 
-  return (
-    <>
-      <Sheet game={data.gameSystem} data={data} />
-    </>
-  );
+  return <Sheet game={data.gameSystem} data={data} />;
 }

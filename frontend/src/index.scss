@@ -3,8 +3,8 @@
 /* ----- Layout */
 $layoutBgColor: #151515;
 $layoutBorderColor: #c40000;
-$layoutBorderWidth: 2px;
 $layoutFontColor: #e5e5e5;
+$layoutBorderWidth: 2px;
 $layoutMargin: 20px;
 
 $transitionDuration: 0.3s;
@@ -14,12 +14,12 @@ $layoutRoleetbarHeight: 9vh;
 $layoutFooterHeight: 25vh;
 $layoutContentHeight: calc(
   100vh - #{$layoutMetabarHeight} - #{$layoutRoleetbarHeight} - #{$layoutFooterHeight} -
-    2 * #{$layoutBorderWidth}
+    2 * #{$layoutBorderWidth} - 2 *#{$layoutMargin}
 );
 
 /* ----- Cards */
-$cardBgColor: #151515;
-$cardFontColor: #e5e5e5;
+$cardBgColor: $layoutBgColor;
+$cardFontColor: $layoutFontColor;
 $cardMargin: 15px;
 $cardFont: "Coda", cursive;
 $cardWidth: 30vw;
