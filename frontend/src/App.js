@@ -3,7 +3,6 @@ import { Switch, Route } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./App.scss";
-import HomePage from "./pages/HomePage";
 import BlogPage from "./pages/BlogPage";
 import ArticlePage from "./pages/ArticlePage";
 import CharactersPage from "./pages/CharactersPage";
@@ -22,9 +21,8 @@ export default function App() {
       <RoleetBar />
       <div id="Content">
         <Switch>
-          <Route exact path="/" component={HomePage} />
+          <Route exact path="/" component={BlogPage} />
           <Route path="/blog/:articleId" component={ArticlePage} />
-          <Route path="/blog" component={BlogPage} />
           <Route path="/characters" component={CharactersPage} />
           <Route path="/scenarii" component={ScenariiPage} />
           <Route path="/groups" component={GroupsPage} />
