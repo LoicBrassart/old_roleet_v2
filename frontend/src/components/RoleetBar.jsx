@@ -1,9 +1,11 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { Link, NavLink } from "react-router-dom";
 import "./styles/RoleetBar.scss";
 import SearchBar from "./SearchBar";
 
 export default function RoleetBar() {
+  const user = useSelector(state => state.user);
   return (
     <nav id="RoleetBar">
       <div className="logo center">
@@ -28,9 +30,11 @@ export default function RoleetBar() {
         <li className="center">
           <NavLink to="/groups">Groupes</NavLink>
         </li>
-        <li className="center">
-          <img src="/img/user-avatar-default.png" alt="Mon compte Roleet" />
-        </li>
+        {user.loggedIn ? (
+          <li className="center">
+            <img src="/img/user-avatar-default.png" alt="Mon compte Roleet" />
+          </li>
+        ) : null}
       </ul>
     </nav>
   );
