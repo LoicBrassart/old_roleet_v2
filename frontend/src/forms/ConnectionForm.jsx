@@ -15,7 +15,7 @@ export default function ConnectionForm() {
       }}
       onSubmit={values => {
         api
-          .post("/users", values)
+          .get("/users", values)
           .then(({ data }) => {
             dispatch({ type: "LOGIN_MOCK_USER" });
           })
