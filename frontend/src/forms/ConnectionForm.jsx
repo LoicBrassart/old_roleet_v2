@@ -5,7 +5,7 @@ import { toast } from "react-toastify";
 import { api } from "../conf";
 import { TextType, PasswordType } from "./fields/index";
 
-export default function ConnectionForm() {
+export default function ConnectionForm({ loginCb }) {
   const dispatch = useDispatch();
   return (
     <Formik
@@ -23,6 +23,9 @@ export default function ConnectionForm() {
             toast.error(
               "We encountered an error while logging in, sorry about that"
             );
+          })
+          .then(() => {
+            loginCb();
           });
       }}
     >
