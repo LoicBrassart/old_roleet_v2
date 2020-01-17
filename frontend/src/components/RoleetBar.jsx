@@ -2,9 +2,9 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { Link, NavLink } from "react-router-dom";
 import "./styles/RoleetBar.scss";
-import SearchBar from "./SearchBar";
+import { SearchBar } from ".";
 
-export default function RoleetBar() {
+export function RoleetBar() {
   const user = useSelector(state => state.user);
   return (
     <nav id="RoleetBar">

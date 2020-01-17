@@ -4,7 +4,7 @@ import Modali, { useModali } from "modali";
 import ConnectionForm from "../forms/ConnectionForm";
 import "./styles/MetaBar.scss";
 
-export default function MetaBar() {
+export function MetaBar() {
   const user = useSelector(state => state.user);
   const [formToDisplay, setFormToDisplay] = useState("connection");
   const [loginModal, toggleLoginModal] = useModali({

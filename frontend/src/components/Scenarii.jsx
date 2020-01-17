@@ -1,4 +1,4 @@
-export default function Scenarii({ data }) {
+export function Scenarii({ data }) {
   return data.map(scen => {
     return scen.title;
   });

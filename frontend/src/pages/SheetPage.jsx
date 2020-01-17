@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import { useParams } from "react-router-dom";
 import { api } from "../conf";
-import Sheet from "../components/Sheet";
+import { Sheet } from "../components";
 
 export function SheetPage() {
   const { sheetId } = useParams();

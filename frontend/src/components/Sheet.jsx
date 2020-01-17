@@ -1,9 +1,9 @@
 import React from "react";
-import NwodWerewolves from "./sheets/NwodWerewolves";
+import { NwodWerewolves } from "./sheets";
 
 import "./styles/Sheet.scss";
 
-export default function Sheet({ game, data }) {
+export function Sheet({ game, data }) {
   return (
     <div className="Sheet">
       {game === "Loups-Garous : les Déchus" && <NwodWerewolves data={data} />}

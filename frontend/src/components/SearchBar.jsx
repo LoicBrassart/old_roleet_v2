@@ -63,7 +63,7 @@ function SearchResults({ users, chars, scenarii }) {
   );
 }
 
-export default function SearchBar() {
+export function SearchBar() {
   const [needle, setNeedle] = useState("");
   const [chars, setChars] = useState([]);
   const [scenarii, setScens] = useState([]);

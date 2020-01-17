@@ -1,9 +1,9 @@
 import React from "react";
-import Character from "./Character";
+import { Character } from ".";
 
 import "./styles/Characters.scss";
 
-export default function Characters({ data }) {
+export function Characters({ data }) {
   return (
     <div className="Characters">
       {data.map((char, i) => {

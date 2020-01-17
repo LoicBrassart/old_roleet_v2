@@ -12,9 +12,7 @@ import {
   ScenariiPage,
   SheetPage
 } from "./pages";
-import MetaBar from "./components/MetaBar";
-import RoleetBar from "./components/RoleetBar";
-import Footer from "./components/Footer";
+import { Footer, MetaBar, RoleetBar } from "./components";
 
 export default function App() {
   return (

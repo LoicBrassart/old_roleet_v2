@@ -1,8 +1,8 @@
 import React from "react";
-import Article from "./Article";
+import { Article } from ".";
 import "./styles/Articles.scss";
 
-export default function Articles({ data }) {
+export function Articles({ data }) {
   return (
     <div className="Articles">
       {data

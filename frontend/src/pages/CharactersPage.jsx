@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { toast } from "react-toastify";
-import Characters from "../components/Characters";
+import { Characters } from "../components";
 import { api } from "../conf";
 
 export function CharactersPage() {

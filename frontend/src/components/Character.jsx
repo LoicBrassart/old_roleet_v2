@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./styles/Character.scss";
-import Badge from "./Badge";
+import { Badge } from ".";
 
 const FluffsTab = ({ fluffs }) => (
   <article className="descriptionArticle articleSelected">
@@ -32,7 +32,7 @@ const SheetsTab = ({ sheets }) => (
   </article>
 );
 
-export default function Character({
+export function Character({
   avatar,
   name,
   baseline,
