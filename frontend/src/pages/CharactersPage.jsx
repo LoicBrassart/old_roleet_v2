@@ -3,7 +3,7 @@ import { toast } from "react-toastify";
 import Characters from "../components/Characters";
 import { api } from "../conf";
 
-export default function CharactersPage() {
+export function CharactersPage() {
   const [characters, setCharacters] = useState([]);
 
   useEffect(() => {

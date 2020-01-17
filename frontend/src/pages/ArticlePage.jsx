@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import Article from "../components/Article";
 import { api } from "../conf";
 
-export default function CharactersPage() {
+export function ArticlePage() {
   const { articleId } = useParams();
   const [article, setArticle] = useState([]);
 

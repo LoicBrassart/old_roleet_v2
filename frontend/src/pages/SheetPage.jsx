@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import { api } from "../conf";
 import Sheet from "../components/Sheet";
 
-export default function SheetPage() {
+export function SheetPage() {
   const { sheetId } = useParams();
   const [data, setData] = useState({});
 

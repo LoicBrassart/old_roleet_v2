@@ -3,7 +3,7 @@ import { toast } from "react-toastify";
 import Scenarii from "../components/Scenarii";
 import { api } from "../conf";
 
-export default function ScenariiPage() {
+export function ScenariiPage() {
   const [scenarii, setScenarii] = useState([]);
 
   useEffect(() => {

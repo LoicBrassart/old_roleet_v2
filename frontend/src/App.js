@@ -3,16 +3,18 @@ import { Switch, Route } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./App.scss";
-import BlogPage from "./pages/BlogPage";
-import ArticlePage from "./pages/ArticlePage";
-import CharactersPage from "./pages/CharactersPage";
-import ScenariiPage from "./pages/ScenariiPage";
-import GroupsPage from "./pages/GroupsPage";
-import ContributorsPage from "./pages/ContributorsPage";
+import {
+  ArticlePage,
+  BlogPage,
+  CharactersPage,
+  ContributorsPage,
+  GroupsPage,
+  ScenariiPage,
+  SheetPage
+} from "./pages";
 import MetaBar from "./components/MetaBar";
 import RoleetBar from "./components/RoleetBar";
 import Footer from "./components/Footer";
-import SheetPage from "./pages/SheetPage";
 
 export default function App() {
   return (

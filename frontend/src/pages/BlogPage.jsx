@@ -3,7 +3,7 @@ import { toast } from "react-toastify";
 import Articles from "../components/Articles";
 import { api } from "../conf";
 
-export default function CharactersPage() {
+export function BlogPage() {
   const [articles, setArticles] = useState([]);
 
   useEffect(() => {
