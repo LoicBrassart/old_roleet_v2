@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import Modali, { useModali } from "modali";
-import { LoginForm } from "../forms";
+import { LoginForm, SigninForm } from "../forms";
 import "./styles/MetaBar.scss";
 
 export function MetaBar() {
@@ -30,7 +30,7 @@ export function MetaBar() {
       <Modali.Modal {...loginModal}>
         {formToDisplay === "connection" && (
           <>
-            <LoginForm loginCb={toggleLoginModal} />
+            <LoginForm cb={toggleLoginModal} />
             <span
               onClick={() => {
                 setFormToDisplay("signup");
@@ -49,7 +49,7 @@ export function MetaBar() {
         )}
         {formToDisplay === "signup" && (
           <>
-            <p>INSERT SIGNUP HERE</p>
+            <SigninForm cb={toggleLoginModal} />
             <span
               onClick={() => {
                 setFormToDisplay("connection");
