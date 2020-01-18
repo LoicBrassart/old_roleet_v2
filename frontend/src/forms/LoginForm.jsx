@@ -5,7 +5,7 @@ import { toast } from "react-toastify";
 import { api } from "../conf";
 import { TextType, PasswordType } from "./fields";
 
-export default function ConnectionForm({ loginCb }) {
+export function LoginForm({ loginCb }) {
   const dispatch = useDispatch();
   return (
     <Formik
