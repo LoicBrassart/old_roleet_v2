@@ -5,7 +5,7 @@ import { toast } from "react-toastify";
 import { api } from "../conf";
 import { TextType, PasswordType } from "./fields";
 
-export function LoginForm({ loginCb }) {
+export function LoginForm({ cb }) {
   const dispatch = useDispatch();
   return (
     <Formik
@@ -25,7 +25,7 @@ export function LoginForm({ loginCb }) {
             );
           })
           .then(() => {
-            loginCb();
+            cb();
           });
       }}
     >
