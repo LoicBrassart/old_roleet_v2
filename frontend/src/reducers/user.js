@@ -1,5 +1,6 @@
 const initial = {
   name: null,
+  id: null,
   token: null,
   loggedIn: false,
   isAdmin: false
@@ -11,6 +12,7 @@ export default (state = initial, action) => {
       return {
         ...state,
         name: "Benjamin",
+        id: "blablablaBen",
         loggedIn: true,
         isAdmin: false
       };
@@ -18,6 +20,7 @@ export default (state = initial, action) => {
       return {
         ...state,
         name: "Loïc",
+        id: "blablablaLoic",
         loggedIn: true,
         isAdmin: true
       };
