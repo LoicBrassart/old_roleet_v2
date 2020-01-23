@@ -5,7 +5,10 @@ import * as yup from "yup";
 const schema = yup.object().shape({
   login: yup.string().required(),
   password: yup.string().required(),
-  passwordBis: yup.string().required()
+  passwordBis: yup
+    .string()
+    .required()
+    .oneOf([yup.ref("password")], "Passwords must be equal !")
 });
 
 export function SigninForm({ cb }) {
