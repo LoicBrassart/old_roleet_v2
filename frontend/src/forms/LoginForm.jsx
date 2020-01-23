@@ -1,39 +1,46 @@
 import React from "react";
-import { Formik, Form } from "formik";
-import { useDispatch } from "react-redux";
-import { toast } from "react-toastify";
-import { api } from "../conf";
-import { TextType, PasswordType } from "./fields";
+import { useForm } from "react-hook-form";
+import * as yup from "yup";
+
+const schema = yup.object().shape({
+  login: yup.string().required(),
+  password: yup.string().required()
+});
 
 export function LoginForm({ cb }) {
-  const dispatch = useDispatch();
+  const { register, handleSubmit, errors } = useForm({
+    validationSchema: schema
+  });
+  const onSubmit = data => {
+    console.log(data);
+    cb();
+  };
+
   return (
-    <Formik
-      initialValues={{
-        pseudo: "",
-        password: ""
-      }}
-      onSubmit={values => {
-        api
-          .get("/users", values)
-          .then(({ data }) => {
-            dispatch({ type: "LOGIN_MOCK_USER" });
-          })
-          .catch(() => {
-            toast.error(
-              "We encountered an error while logging in, sorry about that"
-            );
-          })
-          .then(() => {
-            cb();
-          });
-      }}
-    >
-      <Form>
-        <TextType label="Pseudo" name="pseudo" placeholder="Jane" />
-        <PasswordType label="Mot de passe" name="password" placeholder="Jane" />
-        <button type="submit">Submit</button>
-      </Form>
-    </Formik>
+    <form onSubmit={handleSubmit(onSubmit)}>
+      <label htmlFor="login" hidden>
+        Login
+      </label>
+      <input
+        type="text"
+        ref={register}
+        name="login"
+        placeholder="Ton adresse mail"
+      />
+      {errors.login && <p>{errors.login.message}</p>}
+
+      <label htmlFor="password" hidden>
+        Mot de passe
+      </label>
+      <input
+        type="password"
+        ref={register}
+        name="password"
+        placeholder="Password"
+      />
+      {errors.password && <p>{errors.password.message}</p>}
+
+      <input type="submit" />
+    </form>
   );
 }

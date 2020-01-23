@@ -49,7 +49,7 @@ export function MetaBar() {
         )}
         {formToDisplay === "signup" && (
           <>
-            <SigninForm cb={toggleLoginModal} />
+            <SigninForm />
             <span
               onClick={() => {
                 setFormToDisplay("connection");
