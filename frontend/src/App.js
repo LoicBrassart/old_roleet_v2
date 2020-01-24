@@ -13,6 +13,7 @@ import {
   SheetPage
 } from "./pages";
 import { Footer, MetaBar, RoleetBar } from "./components";
+import { CharacterForm } from "./forms";
 
 export default function App() {
   return (
@@ -22,6 +23,7 @@ export default function App() {
       <div id="Content">
         <Switch>
           <Route exact path="/" component={BlogPage} />
+          <Route excat path="/bacasable" component={CharacterForm} />
           <Route path="/blog/:articleId" component={ArticlePage} />
           <Route path="/characters" component={CharactersPage} />
           <Route path="/scenarii" component={ScenariiPage} />
