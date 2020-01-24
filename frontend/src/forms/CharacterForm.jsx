@@ -15,6 +15,8 @@ export function LoginForm({ cb }) {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
+      <input type="hidden" name="author" value="42" />
+
       <label htmlFor="name" hidden>
         Nom
       </label>
@@ -42,7 +44,6 @@ export function LoginForm({ cb }) {
       {/* Fluffs: array */}
       {/*   Title: text */}
       {/*   Content: text */}
-      {/* Author: hidden */}
 
       <input type="submit" />
     </form>
