@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { toast } from "react-toastify";
-import Articles from "../components/Articles";
+import { Articles } from "../components";
 import { api } from "../conf";
 
-export default function CharactersPage() {
+export function BlogPage() {
   const [articles, setArticles] = useState([]);
 
   useEffect(() => {

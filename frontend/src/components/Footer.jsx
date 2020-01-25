@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./styles/Footer.scss";
 
-export default function Footer() {
+export function Footer() {
   return (
     <footer id="Footer">
       <nav>

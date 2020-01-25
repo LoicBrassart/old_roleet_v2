@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { toast } from "react-toastify";
 import { useParams } from "react-router-dom";
-import Article from "../components/Article";
+import { Article } from "../components";
 import { api } from "../conf";
 
-export default function CharactersPage() {
+export function ArticlePage() {
   const { articleId } = useParams();
   const [article, setArticle] = useState([]);
 

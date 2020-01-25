@@ -1,56 +1,77 @@
-import React from "react";
-import { useDispatch, useSelector } from "react-redux";
+import React, { useState } from "react";
+import { useSelector } from "react-redux";
 import Modali, { useModali } from "modali";
+import { LoginForm, SigninForm } from "../forms";
 import "./styles/MetaBar.scss";
 
-export default function MetaBar() {
-  const dispatch = useDispatch();
+export function MetaBar() {
   const user = useSelector(state => state.user);
+  const [formToDisplay, setFormToDisplay] = useState("connection");
   const [loginModal, toggleLoginModal] = useModali({
-    title: "Are you sure?",
-    message: "Maybe you won't like the fake user we chose for you !",
-    buttons: [
-      <Modali.Button
-        label="Cancel"
-        isStyleCancel
-        onClick={() => toggleLoginModal()}
-      />,
-      <Modali.Button
-        label="Become Rolist"
-        isStyleDestructive
-        onClick={() => {
-          dispatch({ type: "LOGIN_MOCK_USER" });
-          toggleLoginModal();
-        }}
-      />,
-      <Modali.Button
-        label="Become Master"
-        isStyleDestructive
-        onClick={() => {
-          dispatch({ type: "LOGIN_MOCK_ADMIN" });
-          toggleLoginModal();
-        }}
-      />
-    ]
+    title: "Connection: Are you sure?"
   });
   return (
     <>
       <nav id="MetaBar" className="flexer">
         <div>Meta</div>
-        <button
-          onClick={() => {
-            if (user.loggedIn) {
-              dispatch({ type: "LOGIN_LOGOUT" });
-            } else {
+        {user.loggedIn ? (
+          `Hello ${user.name}`
+        ) : (
+          <button
+            onClick={() => {
               toggleLoginModal();
-            }
-          }}
-        >
-          {user.loggedIn ? `Log ${user.name} out` : "Connexion"}
-        </button>
+            }}
+          >
+            Connexion
+          </button>
+        )}
       </nav>
 
-      <Modali.Modal {...loginModal} />
+      <Modali.Modal {...loginModal}>
+        {formToDisplay === "connection" && (
+          <>
+            <LoginForm cb={toggleLoginModal} />
+            <span
+              onClick={() => {
+                setFormToDisplay("signup");
+              }}
+            >
+              Pas encore inscrit ?
+            </span>
+            <span
+              onClick={() => {
+                setFormToDisplay("forgottenPassword");
+              }}
+            >
+              J'ai oublié mon mot de passe...
+            </span>
+          </>
+        )}
+        {formToDisplay === "signup" && (
+          <>
+            <SigninForm />
+            <span
+              onClick={() => {
+                setFormToDisplay("connection");
+              }}
+            >
+              J'ai déjà un compte !
+            </span>
+          </>
+        )}
+        {formToDisplay === "forgottenPassword" && (
+          <>
+            <p>INSERT FORGOTPASSWORD HERE</p>
+            <span
+              onClick={() => {
+                setFormToDisplay("connection");
+              }}
+            >
+              Ah, nan, je l'ai !
+            </span>
+          </>
+        )}
+      </Modali.Modal>
     </>
   );
 }

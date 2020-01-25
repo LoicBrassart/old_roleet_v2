@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { toast } from "react-toastify";
-import Characters from "../components/Characters";
+import { Characters } from "../components";
 import { api } from "../conf";
 
-export default function CharactersPage() {
+export function CharactersPage() {
   const [characters, setCharacters] = useState([]);
 
   useEffect(() => {
@@ -22,6 +22,7 @@ export default function CharactersPage() {
   return (
     <>
       <h2>Personnages</h2>
+      <ul className="flexer"></ul>
       <Characters data={characters} />
     </>
   );

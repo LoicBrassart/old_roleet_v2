@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { toast } from "react-toastify";
-import Scenarii from "../components/Scenarii";
+import { Scenarii } from "../components";
 import { api } from "../conf";
 
-export default function ScenariiPage() {
+export function ScenariiPage() {
   const [scenarii, setScenarii] = useState([]);
 
   useEffect(() => {

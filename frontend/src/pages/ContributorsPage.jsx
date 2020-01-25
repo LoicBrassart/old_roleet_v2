@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function ContributorsPage() {
+export function ContributorsPage() {
   return (
     <>
       <ul>

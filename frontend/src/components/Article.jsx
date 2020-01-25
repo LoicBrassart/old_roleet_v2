@@ -1,7 +1,7 @@
 import React from "react";
 import "./styles/Article.scss";
 
-export default function Article({ title }) {
+export function Article({ title }) {
   return (
     <article className="Article">
       <h4>{title}</h4>

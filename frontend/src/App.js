@@ -3,16 +3,17 @@ import { Switch, Route } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./App.scss";
-import BlogPage from "./pages/BlogPage";
-import ArticlePage from "./pages/ArticlePage";
-import CharactersPage from "./pages/CharactersPage";
-import ScenariiPage from "./pages/ScenariiPage";
-import GroupsPage from "./pages/GroupsPage";
-import ContributorsPage from "./pages/ContributorsPage";
-import MetaBar from "./components/MetaBar";
-import RoleetBar from "./components/RoleetBar";
-import Footer from "./components/Footer";
-import SheetPage from "./pages/SheetPage";
+import {
+  ArticlePage,
+  BlogPage,
+  CharactersPage,
+  ContributorsPage,
+  GroupsPage,
+  ScenariiPage,
+  SheetPage
+} from "./pages";
+import { Footer, MetaBar, RoleetBar } from "./components";
+import { CharacterForm } from "./forms";
 
 export default function App() {
   return (
@@ -22,6 +23,7 @@ export default function App() {
       <div id="Content">
         <Switch>
           <Route exact path="/" component={BlogPage} />
+          <Route excat path="/bacasable" component={CharacterForm} />
           <Route path="/blog/:articleId" component={ArticlePage} />
           <Route path="/characters" component={CharactersPage} />
           <Route path="/scenarii" component={ScenariiPage} />

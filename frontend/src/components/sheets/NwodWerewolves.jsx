@@ -2,7 +2,7 @@ import React from "react";
 import Rating from "react-rating";
 import "./styles/NwodWerewolves.scss";
 
-export default function NwodWerewolves({ data }) {
+export function NwodWerewolves({ data }) {
   return (
     <div className="NwodWerewolves grider">
       <div className="watermark" />
