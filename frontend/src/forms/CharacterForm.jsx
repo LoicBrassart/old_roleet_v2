@@ -106,7 +106,7 @@ export function CharacterForm({ cb }) {
           Ajouter
         </button>
       </>
-      {/* Avatar: file */}
+      <input type="file" name="avatar" ref={register} />
 
       <input type="submit" value="Sauvegarder" />
     </form>
