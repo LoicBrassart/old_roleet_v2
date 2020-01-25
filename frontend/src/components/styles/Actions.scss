@@ -1,0 +1,27 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css);
+
+.button-container {
+  position: relative;
+  display: flex;
+}
+
+.button-menu {
+  background: #72b0ec;
+  border-radius: 1000px;
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.button-child {
+  position: absolute;
+  background: white;
+  border-radius: 1000px;
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
