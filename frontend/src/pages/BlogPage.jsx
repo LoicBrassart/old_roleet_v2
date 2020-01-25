@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { toast } from "react-toastify";
-import { Articles } from "../components";
+import { Articles, Actions } from "../components";
 import { api } from "../conf";
 
 export function BlogPage() {
@@ -23,6 +23,22 @@ export function BlogPage() {
     <>
       <h2>Blog</h2>
       <Articles data={articles} />
+      <Actions
+        elements={[
+          {
+            icon: "home",
+            onClick: () => alert("clicked home")
+          },
+          {
+            icon: "clock-o",
+            onClick: () => alert("clicked clock")
+          },
+          {
+            icon: "lock",
+            onClick: () => alert("clicked lock")
+          }
+        ]}
+      />
     </>
   );
 }
