@@ -20,7 +20,9 @@ app.use((req, res, next) => {
   logger.debug(`Request for: ${req.url}`);
   next();
 });
+
 /* ------------------------------------------------------------- Routes */
+app.use("/characters", require("./routes/character"));
 
 /* ------------------------------------------------------------- 404 and server launch */
 app.use((req, res, next) => {
