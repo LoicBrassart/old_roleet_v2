@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const passport = require("passport");
+const { logger } = require("../conf");
 const { Character } = require("../models");
 
 router.get("/", (req, res) => {
@@ -29,7 +30,8 @@ router.get("/", (req, res) => {
     { skip: page * perPage, limit: perPage },
     (err, characters) => {
       if (err) {
-        logger.debug(`Tech error while scanning characters`);
+        logger.error(`Tech error while scanning characters`);
+        logger.error(err);
         return res.status(500).send("Internal server error");
       }
       if (!characters) {
@@ -47,7 +49,8 @@ router.get("/:id", (req, res) => {
 
   Character.findById(id, (err, character) => {
     if (err) {
-      logger.debug(`Tech error while searching character`);
+      logger.error(`Tech error while searching character`);
+      logger.error(err);
       return res.status(500).send("Internal server error");
     }
     if (!character) {
@@ -63,7 +66,8 @@ router.get("/:id", (req, res) => {
 router.use((req, res, next) => {
   passport.authenticate("jwt", { session: false }, (err, user) => {
     if (err) {
-      logger.debug(`Tech error while checking auth`);
+      logger.error(`Tech error while checking auth`);
+      logger.error(err);
       return res.status(500).send(err, info);
     }
     if (!user) {
@@ -82,7 +86,8 @@ router.post(
     const newCharacter = new Character(data);
     newCharacter.save(err => {
       if (err) {
-        logger.debug(`Error on character creation`);
+        logger.error(`Error on character creation`);
+        logger.error(err);
         return res.status(400).send("Invalid Character creation request");
       }
       logger.debug(`Created a new character`);
