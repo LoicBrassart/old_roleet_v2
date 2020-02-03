@@ -3,11 +3,7 @@ const app = express();
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const passport = require("passport");
-const { backendPort } = require("./conf");
-const pino = require("pino");
-const logger = pino({ level: process.env.LOG_LEVEL || "info" });
-const expressPino = require("express-pino-logger");
-const expressLogger = expressPino({ logger });
+const { backendPort, logger, expressLogger } = require("./conf");
 
 /* ------------------------------------------------------------- Tools */
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -32,5 +28,5 @@ app.use((req, res, next) => {
 });
 
 app.listen(backendPort, () => {
-  logger.debug(`API root available at: http://localhost:${backendPort}/`);
+  logger.debug(`API root available on port #${backendPort}/`);
 });
