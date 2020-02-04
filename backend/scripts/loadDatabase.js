@@ -1,5 +1,5 @@
 const { db } = require("../conf");
-const { Character, User, Scenario, Article } = require("../models");
+const { Character, User, Scenario, Article, Sheet } = require("../models");
 let data;
 
 data = require("../../fixtures/users.json");
@@ -54,6 +54,20 @@ data.map(blogData => {
       return;
     }
     console.log(`Article recorded: ${blogData.title}`);
+  });
+  return;
+});
+
+data = require("../../fixtures/sheets.json");
+db.dropCollection("sheets");
+data.map(sheetData => {
+  const newSheet = new Sheet(sheetData);
+  newSheet.save(err => {
+    if (err) {
+      console.error(`Failure for Sheet: ${err}`);
+      return;
+    }
+    console.log(`Sheet recorded`);
   });
   return;
 });
