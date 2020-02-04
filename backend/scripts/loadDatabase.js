@@ -1,5 +1,5 @@
 const { db } = require("../conf");
-const { Character, User, Scenario } = require("../models");
+const { Character, User, Scenario, Article } = require("../models");
 let data;
 
 data = require("../../fixtures/users.json");
@@ -31,7 +31,7 @@ data.map(charData => {
 });
 
 data = require("../../fixtures/scenarii.json");
-db.dropCollection("scenarii");
+db.dropCollection("scenarios");
 data.map(scenData => {
   const newScen = new Scenario(scenData);
   newScen.save(err => {
@@ -40,6 +40,20 @@ data.map(scenData => {
       return;
     }
     console.log(`Scenario recorded: ${scenData.title}`);
+  });
+  return;
+});
+
+data = require("../../fixtures/blog.json");
+db.dropCollection("articles");
+data.map(blogData => {
+  const newArticle = new Article(blogData);
+  newArticle.save(err => {
+    if (err) {
+      console.error(`Failure for Article ${blogData.title}: ${err}`);
+      return;
+    }
+    console.log(`Article recorded: ${blogData.title}`);
   });
   return;
 });
