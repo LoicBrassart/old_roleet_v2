@@ -7,7 +7,7 @@ const dbHost = process.env.DB_HOST || "localhost";
 const dbPort = process.env.DB_PORT || "42";
 const dbName = process.env.DB_NAME || "toto";
 const dbUrl = `mongodb://${dbHost}:${dbPort}/${dbName}`;
-mongoose.connect(dbUrl, { useNewUrlParser: true });
+mongoose.connect(dbUrl, { useUnifiedTopology: true, useNewUrlParser: true });
 
 const logger = pino({ level: process.env.LOG_LEVEL || "info" });
 const expressLogger = expressPino({ logger });
