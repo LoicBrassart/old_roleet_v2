@@ -1,0 +1,166 @@
+[
+  {
+    "id": "5ce422a27ab10323d71ed9c0",
+    "gameSystem": "Loups-Garous : les Déchus",
+    "gameSystemImg": "nWoD_werewolves.png",
+    "attributes": {
+      "intelligence": 4,
+      "astuce": 3,
+      "resolution": 3,
+      "force": 4,
+      "dexterite": 2,
+      "vigueur": 3,
+      "presence": 5,
+      "manipulation": 1,
+      "calme": 5
+    },
+    "civilState": {
+      "experience": 0,
+      "concept": "Gardien d'Azeroth",
+      "vertu": "Calme",
+      "vice": "Paresse",
+      "auspice": "Croissant de Lune",
+      "tribu": "Sans Clan",
+      "loge": "...",
+      "volonteMax": 7,
+      "volonte": 4,
+      "santeMax": 8,
+      "sante": 7,
+      "essence": 10,
+      "appelPrimal": 5,
+      "atouts": [
+        {
+          "label": "Oreille d'Azeroth",
+          "level": 5
+        },
+        {
+          "label": "Diplomate",
+          "level": 4
+        }
+      ],
+      "handicaps": ["Neutralité", "Serment (ne plus se joindre à la Horde)"],
+      "harmonie": 10,
+      "renom": {
+        "purete": 3,
+        "gloire": 1,
+        "honneur": 5,
+        "sagesse": 5,
+        "ruse": 2
+      }
+    },
+    "skills": {
+      "mental": {
+        "artisanat": 2,
+        "erudition": 4,
+        "informatique": 0,
+        "investigation": 3,
+        "medecine": 1,
+        "occultisme": 4,
+        "politique": 3,
+        "sciences": 0
+      },
+      "physique": {
+        "armesBlanches": 4,
+        "armesAFeu": 0,
+        "athletisme": 3,
+        "bagarre": 4,
+        "conduite": 0,
+        "discretion": 2,
+        "larcin": 0,
+        "survie": 4
+      },
+      "social": {
+        "animaux": 1,
+        "empathie": 5,
+        "expression": 4,
+        "intimidation": 3,
+        "persuasion": 4,
+        "entregent": 2,
+        "connaissancesDeLaRue": 3,
+        "subterfuge": 0
+      }
+    }
+  },
+  {
+    "id": "5ce422a27ab1070ed71ed9c0",
+    "gameSystem": "Loups-Garous : les Déchus",
+    "gameSystemImg": "nWoD_werewolves.png",
+    "attributes": {
+      "intelligence": 3,
+      "astuce": 2,
+      "resolution": 5,
+      "force": 1,
+      "dexterite": 5,
+      "vigueur": 2,
+      "presence": 4,
+      "manipulation": 5,
+      "calme": 1
+    },
+    "civilState": {
+      "experience": 0,
+      "concept": "Reine des Réprouvés",
+      "vertu": "Chasteté",
+      "vice": "Colère",
+      "auspice": "Pleine Lune",
+      "tribu": "Sans Clan",
+      "loge": "...",
+      "volonteMax": 10,
+      "volonte": 8,
+      "santeMax": 6,
+      "sante": 6,
+      "essence": 4,
+      "appelPrimal": 7,
+      "atouts": [
+        {
+          "label": "Domination",
+          "level": 5
+        },
+        {
+          "label": "Politique",
+          "level": 1
+        }
+      ],
+      "handicaps": ["Haine (Arthas)", "Haine (Horde)"],
+      "harmonie": 3,
+      "renom": {
+        "purete": 1,
+        "gloire": 4,
+        "honneur": 5,
+        "sagesse": 0,
+        "ruse": 3
+      }
+    },
+    "skills": {
+      "mental": {
+        "artisanat": 3,
+        "erudition": 1,
+        "informatique": 0,
+        "investigation": 4,
+        "medecine": 3,
+        "occultisme": 2,
+        "politique": 0,
+        "sciences": 0
+      },
+      "physique": {
+        "armesBlanches": 4,
+        "armesAFeu": 0,
+        "athletisme": 4,
+        "bagarre": 2,
+        "conduite": 0,
+        "discretion": 5,
+        "larcin": 3,
+        "survie": 4
+      },
+      "social": {
+        "animaux": 4,
+        "empathie": 2,
+        "expression": 5,
+        "intimidation": 5,
+        "persuasion": 2,
+        "entregent": 1,
+        "connaissancesDeLaRue": 3,
+        "subterfuge": 4
+      }
+    }
+  }
+]
