@@ -49,7 +49,7 @@ const CharacterSchema = new Schema({
   characterSheets: {
     type: [
       {
-        _id: {
+        sheetData: {
           type: mongoose.ObjectId,
           ref: "Sheet",
           required: true
