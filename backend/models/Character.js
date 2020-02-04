@@ -49,13 +49,23 @@ const CharacterSchema = new Schema({
   characterSheets: {
     type: [
       {
-        gameSystem: {
+        _id: {
+          type: mongoose.ObjectId,
+          ref: "Sheet",
+          required: true
+        },
+        gameSystemDisplay: {
           type: String,
           required: true,
           enum: [
             "Dungeons & Dragons | 3.5",
             "New World of Darkness | Werewolves: the Forsaken"
           ]
+        },
+        gameSystem: {
+          type: String,
+          required: true,
+          enum: ["dnd_3-5", "nWoD_werewolves"]
         }
       }
     ]

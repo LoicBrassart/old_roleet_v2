@@ -19,11 +19,12 @@ const SheetsTab = ({ sheets }) => (
   <article className="sheetsArticle articleSelected">
     <ul className="systems">
       {sheets.map((sheet, i) => {
+        console.log(sheet);
         return (
           <Badge
             key={i}
             imgPath={`/img/gamesystems/${sheet.gameSystemImg}`}
-            linkTo={`/sheet/${sheet.sheet}`}
+            linkTo={`/sheet/${sheet._id}`}
             imgAlt={sheet.gameSystem}
           />
         );
